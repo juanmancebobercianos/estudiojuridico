@@ -1,0 +1,625 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f5e8c7;
+    background-color: #2c2a28;
+    padding-top: 5rem; /* Añadido para evitar que el contenido se solape con el header fijo */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Centra el contenido del header */
+    align-items: center;
+    background-color: #755921;
+    padding: 1rem 2rem;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+header .logo img {
+    max-width: 60px; /* Ajusta el ancho máximo del logo */
+    height: auto;
+}
+
+nav {
+    width: 100%; /* Asegura que el contenedor de navegación ocupe todo el ancho */
+    display: flex;
+    justify-content: center; /* Centra el menú de navegación */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5e8c7;
+    font-weight: bold;
+    font-size: 1.2rem; /* Aumenta el tamaño de las letras */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c2a85d;
+}
+
+
+/* Sección hero */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem; /* Reduce el padding superior e inferior */
+    background-color: #2c2a28;
+    color: #f5e8c7;
+    position: relative; /* Necesario para posicionar el botón sobre la imagen */
+}
+
+/* Imagen dentro de la sección hero */
+.hero img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la página */
+    height: auto;
+    max-height: 700px;
+    border-radius: 10px;
+    margin-top: 0; /* Elimina el margen superior */
+}
+
+
+.btn-contacto {
+    position: absolute;
+    top: 85%; /* Centra el botón verticalmente */
+    left: 5%; /* Mueve el botón hacia la izquierda, puedes ajustar este valor */
+    transform: translateY(-50%); /* Mantiene el centrado vertical del botón */
+    background-color: #c2a85d;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #755921;
+}
+
+
+/* Secciones */
+.section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #1d1c1a;
+    margin: 1rem 0;
+    border-left: 5px solid #c2a85d;
+}
+
+.section h2 {
+    color: #f5e8c7;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    color: #e4d7b7;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1d1c1a;
+    color: #c2a85d;
+    font-size: 0.9rem;
+}
+
+/* Imagen en la sección de Abogados */
+.imagen-abogados {
+    width: 700px; /* Establece el ancho deseado (puedes cambiarlo) */
+    height: 400px; /* Establece la altura deseada (puedes cambiarlo) */
+    object-fit: cover; /* Asegura que la imagen se recorte para ajustarse al contenedor */
+    margin: 1rem auto; /* Centra la imagen horizontalmente y añade espacio alrededor */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    border-radius: 10px; /* Bordes redondeados para un diseño más estético */
+    box-shadow: 0 8px 10px rgba(231, 200, 45, 0.2); /* Sombra para destacar la imagen */
+}
+
+/* Estilo para el texto de la sección "Sobre Abogados" */
+.texto-abogados {
+    max-width: 800px; /* Define un ancho máximo para que el texto no ocupe toda la pantalla */
+    margin: 1rem auto; /* Centra el texto horizontalmente y añade espacio alrededor */
+    text-align: justify; /* Alinea el texto de forma justificada para mayor legibilidad */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+    font-size: 1rem; /* Tamaño de fuente ajustado para lectura cómoda */
+    color: #e4d7b7; /* Asegura que el color del texto sea legible en el fondo */
+}
+
+/* Imagen en la sección de Notarios */
+.imagen-notarios {
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    max-width: 100%; /* Evita que la imagen exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin: 1rem auto; /* Centra la imagen horizontalmente y añade espacio alrededor */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    border-radius: 10px; /* Bordes redondeados para un diseño más estético */
+    box-shadow: 0 8px 10px rgba(231, 200, 45, 0.2); /* Sombra para destacar la imagen */
+}
+
+/* Tamaño personalizado para la imagen */
+.imagen-notarios {
+    width: 750px; /* Ajusta este valor para definir el ancho deseado */
+    height: 450px; /* Ajusta este valor para definir la altura deseada */
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+
+/* Estilo para el texto de la sección "Notarios" */
+.texto-notarios {
+    max-width: 800px; /* Define un ancho máximo para que el texto no ocupe toda la pantalla */
+    margin: 1rem auto; /* Centra el texto horizontalmente y añade espacio alrededor */
+    text-align: justify; /* Alinea el texto de forma justificada para mayor legibilidad */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+    font-size: 1rem; /* Tamaño de fuente ajustado para lectura cómoda */
+    color: #e4d7b7; /* Asegura que el color del texto sea legible en el fondo */
+}
+
+/* Imagen en la sección de Corredores de Seguros */
+.imagen-corredores {
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    max-width: 100%; /* Evita que la imagen exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin: 1rem auto; /* Centra la imagen horizontalmente y añade espacio alrededor */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    border-radius: 10px; /* Bordes redondeados para un diseño más estético */
+    box-shadow: 0 8px 10px rgba(231, 200, 45, 0.2); /* Sombra para destacar la imagen */
+}
+
+/* Tamaño personalizado para la imagen */
+.imagen-corredores {
+    width: 800px; /* Ajusta este valor para definir el ancho deseado */
+    height: 450px; /* Ajusta este valor para definir la altura deseada */
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+/* Estilo para el texto de la sección "Corredores de Seguros" */
+.texto-corredores {
+    max-width: 800px; /* Define un ancho máximo para que el texto no ocupe toda la pantalla */
+    margin: 1rem auto; /* Centra el texto horizontalmente y añade espacio alrededor */
+    text-align: justify; /* Alinea el texto de forma justificada para mayor legibilidad */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+    font-size: 1rem; /* Tamaño de fuente ajustado para lectura cómoda */
+    color: #e4d7b7; /* Asegura que el color del texto sea legible en el fondo */
+}
+
+/* Estilo general para la sección de testimonios */
+.testimonios {
+    background-color: #fff; /* Fondo blanco */
+    color: #2c2a28; /* Color del texto para contraste */
+    padding: 3rem 1rem; /* Espaciado interno */
+    text-align: center;
+}
+
+.testimonios h2 {
+    font-size: 2.5rem;
+    color: #030200;
+    margin-bottom: 1rem;
+}
+
+section#testimonios .introduccion-testimonios {
+    font-size: 2rem; /* Cambia el tamaño de la letra aquí */
+    color: #2c2a2a; /* Cambia el color del texto aquí (ejemplo: rojo) */
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+
+/* Contenedor de los testimonios */
+.contenedor-testimonios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 2rem; /* Espaciado entre columnas y filas */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Estilo para cada testimonio individual */
+.testimonio {
+    background-color: #ebdd8e; /* Fondo blanco */
+    padding: 1.5rem; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar volumen */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+}
+
+
+
+/* Efecto hover para los testimonios */
+.testimonio:hover {
+    transform: translateY(-5px); /* Eleva el contenedor al pasar el mouse */
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+/* Títulos y textos dentro de los testimonios */
+.testimonio h3 {
+    font-size: 1.5rem;
+    color: #333; /* Color del texto del título */
+    margin-bottom: 0.5rem;
+}
+
+.testimonio p {
+    font-size: 1rem;
+    color: #555; /* Color del texto del contenido */
+    line-height: 1.6;
+}
+
+
+.testimonio h3 {
+    font-size: 1.5rem;
+    color: #755921;
+    margin-bottom: 1rem;
+}
+
+.testimonio p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2c2a28;
+}
+
+/* Contenedor del blog */
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 2rem; /* Espaciado entre las columnas y filas */
+    max-width: 1200px;
+    margin: 2rem auto; /* Centra el contenedor */
+}
+
+/* Estilo de cada elemento del blog */
+.blog-item {
+    text-align: center; /* Centra la imagen y el texto */
+    background-color: #fff; /* Fondo blanco para destacar */
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra normal */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efecto de hover */
+    position: relative; /* Necesario para posicionar el reloj y la fecha */
+    padding-bottom: 3rem; /* Espacio extra para evitar que el texto y la fecha se superpongan */
+}
+
+/* Efecto hover para los elementos del blog */
+.blog-item:hover {
+    transform: translateY(-5px); /* Eleva ligeramente el contenedor */
+    box-shadow: 0 12px 20px rgba(255, 223, 0, 0.6); /* Sombra dorada */
+}
+
+
+/* Imágenes del blog */
+.blog-item img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    max-width: 350px; /* Aumenta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Texto debajo de cada imagen */
+.blog-item p {
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    color: #333; /* Color del texto */
+    margin: 0;
+    padding-bottom: 1.5rem; /* Espacio adicional para evitar superposición con la fecha */
+}
+
+/* Estilo para el reloj y la fecha debajo de cada artículo */
+.fecha {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea a la izquierda */
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666; /* Color del texto de la fecha */
+    position: absolute; /* Permite posicionar la fecha en la parte inferior */
+    bottom: 10px; /* Ubica la fecha en la parte inferior */
+    left: 10px; /* Alinea la fecha a la izquierda */
+}
+
+/* Icono de reloj */
+.reloj-icon {
+    margin-right: 0.5rem; /* Espacio entre el reloj y la fecha */
+}
+
+/* Estilo de la fecha */
+.fecha-texto {
+    font-style: italic; /* Estilo de la fecha en cursiva */
+}
+
+/* Estilo del pop-up */
+.popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que el pop-up esté encima de todo */
+}
+
+#popup-text {
+    color: black;
+}
+
+/* Contenido del pop-up */
+.popup-content {
+    background-color: rgb(221, 168, 168);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+}
+
+/* Botón para cerrar el pop-up */
+.popup-close {
+    font-size: 2rem;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilos generales para el formulario */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #5c6bc0; /* Color de enfoque */
+    outline: none;
+}
+
+.contact-form .btn-submit {
+    background-color: #5c6bc0; /* Color principal */
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #3f4a7e; /* Color al pasar el mouse */
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #f5f5f5; /* Fondo claro para el pie de página */
+    padding: 2rem 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra el texto del pie de página */
+}
+
+/* Estilo para el banner del pie de página */
+.footer-banner {
+    display: flex; /* Usamos flexbox para alinear el logo y el texto */
+    justify-content: space-between; /* Espaciado entre el logo y el texto */
+    align-items: center; /* Alineación vertical */
+    padding: 1rem 2rem; /* Espaciado interno */
+    background-color: #333; /* Fondo oscuro para el banner */
+    color: white; /* Color de texto blanco */
+}
+
+/* Estilo para el logo en el pie de página */
+.footer-logo img {
+    width: 200px; /* Tamaño del logo, puedes cambiarlo según lo necesites */
+    height: auto;
+}
+
+/* Estilo para el texto en el pie de página */
+.footer-text {
+    max-width: 600px; /* Limita el ancho del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para los enlaces de email */
+.footer-text a {
+    color: #f8c02e; /* Color dorado para el enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.footer-text a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Coloca los enlaces de navegación en columna */
+        gap: 0.5rem;
+    }
+
+    .hero img {
+        max-height: 500px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .section {
+        padding: 2rem 1rem; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .imagen-abogados,
+    .imagen-notarios,
+    .imagen-corredores {
+        width: 100%; /* Hace que las imágenes se adapten al ancho de la pantalla */
+        height: auto;
+    }
+
+    .testimonios h2 {
+        font-size: 2rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .contenedor-testimonios {
+        grid-template-columns: 1fr; /* Muestra un testimonio por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-contacto {
+        left: 50%; /* Centra el botón */
+        transform: translateX(-50%); /* Ajusta la posición para centrado */
+        padding: 1rem 1.5rem; /* Reduce el tamaño del botón */
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem; /* Ajusta el espacio entre los elementos */
+    }
+
+    .section h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    .section p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+}
+
+/* Ajustes generales para el banner */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem; /* Reduce el padding superior e inferior */
+    background-color: #2c2a28;
+    color: #f5e8c7;
+    position: relative;
+    height: 100vh; /* Asegura que el banner ocupe toda la altura de la pantalla */
+}
+
+.hero img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: auto;
+    max-height: 60vh; /* Limita la altura de la imagen para que no ocupe demasiado espacio */
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para pantallas pequeñas */
+    .hero {
+        padding: 1.5rem 1rem; /* Reduce el padding en pantallas más pequeñas */
+        height: auto; /* Deja que el banner se ajuste al contenido */
+    }
+
+    .hero img {
+        max-height: 50vh; /* Reduce aún más la altura de la imagen en pantallas más pequeñas */
+    }
+
+    /* Ajustes para la barra de navegación */
+    header {
+        padding: 1rem; /* Reduce el padding del header */
+    }
+
+    nav ul {
+        flex-direction: column; /* Coloca los elementos del menú en columna */
+        gap: 0.5rem; /* Ajusta el espacio entre los elementos */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Reduce el tamaño de la fuente en la barra de navegación */
+    }
+
+    /* Ajustes para el botón de contacto */
+    .btn-contacto {
+        font-size: 1rem; /* Reduce el tamaño del texto en el botón */
+        padding: 0.8rem 1.5rem; /* Reduce el padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes adicionales para pantallas muy pequeñas */
+    .hero {
+        padding: 1rem; /* Reduce aún más el padding */
+    }
+
+    .hero img {
+        max-height: 40vh; /* Limita aún más la altura de la imagen */
+    }
+
+    /* Ajustes para la barra de navegación */
+    nav ul {
+        flex-direction: column; /* Asegura que los elementos estén en columna */
+        gap: 0.3rem; /* Reduce el espacio entre los elementos */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    /* Ajustes para el botón de contacto */
+    .btn-contacto {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en el botón */
+        padding: 0.7rem 1.2rem; /* Reduce el padding */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
