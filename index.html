@@ -10,8 +10,14 @@
 
 <body>
     <header>
-       
-        <nav>
+        <!-- Botón de menú hamburguesa, visible solo en pantallas pequeñas -->
+        <div class="menu-hamburguesa" id="menu-hamburguesa">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav id="nav">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-abogados">Abogados</a></li>
@@ -280,6 +286,17 @@
             }
         });
     });
+
+    // Código JavaScript para el menú hamburguesa
+    document.addEventListener("DOMContentLoaded", function() {
+            const menuHamburguesa = document.getElementById('menu-hamburguesa');
+            const nav = document.getElementById('nav');
+
+            // Al hacer clic en el botón hamburguesa, se muestra o se oculta el menú
+            menuHamburguesa.addEventListener('click', function() {
+                nav.classList.toggle('activo');
+            });
+        });
     
     </script>
 
